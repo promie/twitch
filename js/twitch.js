@@ -26,9 +26,9 @@ $(document).ready(function(){
         $.getJSON(getStatus(streamer), data=>{
             
             if(data.stream === null){
-                console.log(`${streamer} is currently OFFLINE`);
+                $('#results').append(`<li>${streamer} is currently Offline</li>`);
             }else{
-                console.log(`${streamer} is currently ONLINE`);
+                $('#results').append(`<li>${streamer} is currently Online</li>`);
             }
             
         });
@@ -62,7 +62,6 @@ const getChannelInfo = (streamersName) =>{
     
 }
     
-
 
 
 

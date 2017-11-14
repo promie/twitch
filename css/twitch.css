@@ -1,8 +1,14 @@
+body{
+    background-color: #6541A5;
+}
+
+
+
 /*=====HEAD SECTION=====*/
 .github{
     font-size: 35px;
     text-decoration: none;
-    color: black;
+    color: white;
     margin-top: 10px;
     text-decoration: none;
 }
@@ -10,7 +16,45 @@
 .github:hover{
     font-size: 35px;
     text-decoration: none;
-    color: black;
+    color:white;
     margin-top: 10px;
     text-decoration: none;
 }
+
+#states {
+    padding-left: 20px;
+    margin-top: -30x;
+  }
+  
+  #states li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 8px;
+  }
+  
+  #states li button {
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border-color: transparent;
+    width: 90px;
+    padding: 5px;
+  }
+  
+  .online {
+    background-color: green;
+  }
+  
+  .offline {
+    background-color: red;
+  }
+
+  #logo{
+      width: 330px;
+  }
+
+  #author{
+      margin-left: 190px;
+      margin-top: -40px;
+  }
+
+  
