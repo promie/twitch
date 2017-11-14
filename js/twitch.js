@@ -26,9 +26,11 @@ $(document).ready(function(){
         $.getJSON(getStatus(streamer), data=>{
             
             if(data.stream === null){
-                $('#results').append(`<li>${streamer} is currently Offline</li>`);
+                $('#results').append(`<p class="offline">Offline</p>
+                                    <p class="streamer">${streamer}</p>`);
             }else{
-                $('#results').append(`<li>${streamer} is currently Online</li>`);
+                $('#results').append(`<p class="online">Online</p>
+                                    <p class="streamer">${streamer}</p>`);
             }
             
         });
@@ -37,9 +39,7 @@ $(document).ready(function(){
     streamers.forEach(streamer =>{
         $.getJSON(getChannelInfo(streamer), data2=>{
 
-            if(data2.error){
-                console.log(`${streamer} no longer exists`);
-            }
+          
             
         });
     });
