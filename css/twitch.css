@@ -57,6 +57,52 @@ body{
       margin-top: -40px;
   }
 
+  .streamer {
+    width: 100%;
+    height: 60px;
+    background-color: #4a5e82;
+    border-top: 1px solid #E1E1E6;
+    border-bottom: 1px solid #E1E1E6;
+    float: left;
+    line-height: 30px;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    margin: 6px 0 0 10px;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid #E1E1E6;
+}
+
+.game {
+    width: 50%;
+    float: right;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.offline-streamer .game {
+    color: #8ea7c2;
+}
+
+.offline-streamer p {
+    color: #B8CCA6;
+}
+
+p {
+    float: left;
+    font-size: 1.4em;
+    padding: 0 0 0 25px;
+}
+
+.streamerName{
+    margin-top: 10px;
+}
+
+
 
 
   
