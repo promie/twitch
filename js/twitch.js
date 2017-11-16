@@ -17,17 +17,7 @@ $(document).ready(function(){
             }
         });
     });
-
-
-
-
-
-
-
-}); //End $(document).ready(function())
-
-
-
+});
 
 const channelStatus = (data) =>{
     const name = data.display_name;
@@ -40,7 +30,6 @@ const channelStatus = (data) =>{
             $('.online-streamer').append(`<div class="streamer online"><a href="${data.stream.channel.url}" target="_blank"><img class="logo" src="${data.stream.channel.logo}"</a><p class="streamerName">${stringFormat(name)}</p><p class="game">Streaming: ${stringFormat(data.stream.game)}</p></div>`);
         }
     });
-
 }
 
 const getStatus = (streamersName) =>{
@@ -56,7 +45,6 @@ const getChannelInfo = (streamersName) =>{
         const streamersURL = 'https://wind-bow.glitch.me/twitch-api/channels/';
     
         return `${streamersURL}${streamersName}`
-    
 }
 
 const stringFormat = (text) =>{
@@ -81,7 +69,6 @@ const clickEvents = () =>{
         $('.online-streamer').addClass('hide')
         $('.offline-streamer').removeClass('hide')
     });
-    
 }
 
 
