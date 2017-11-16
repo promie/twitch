@@ -4,36 +4,42 @@ $(document).ready(function(){
     const noImageURL = 'http://www.iconninja.com/files/791/598/492/humans-person-social-users-profile-friends-account-icon.svg';
 
 
+
     streamers.forEach(streamer =>{
+        $.getJSON(getChannelInfo(streamer), data=>{
+
+            channelStatus(data);
+
+            if(data.logo === null){
+                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${data.display_name}</p><p class="game">Offline</p></div>`)
+            }else{
+                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}"><img class="logo" src="${data.logo}"></a><p class="streamerName">${data.display_name}</p><p class="game">Offline</p></div>`)
+            }
+        });
+    });
+
+    //Bugs need to be fixed in this section. Can't access the array list of streamers
+    const channelStatus = (data) =>{
+        const name = data.display_name;
+    
         $.getJSON(getStatus(streamer), data=>{
             
-
-            console.log(data.display_name);
-
-            /*
             if(data.stream !== null){
-                $(`#${data.channel.display_name}`)
-
-            }
-
-            */
-            
-        });
-    });
-
-    streamers.forEach(streamer =>{
-        $.getJSON(getChannelInfo(streamer), data2=>{
-
-            if(data2.logo === null){
-                $('.offline-streamer').append(`<div id="${data2.display_name}" class="streamer"><a href="${data2.url}"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${data2.display_name}</p><p class="game">Offline</p></div>`)
-            }else{
-                $('.offline-streamer').append(`<div id="${data2.display_name}" class="streamer"><a href="${data2.url}"><img class="logo" src="${data2.logo}"></a><p class="streamerName">${data2.display_name}</p><p class="game">Offline</p></div>`)
-                console.log(data2);
+                
+                $(`#${name}`).remove();
+                $('.online-streamer').append(`<div class="streamer online><a href="${data.stream.channel.url}"><img class="logo" src="${data.stream.channel.logo}"</a><p>${name}</p><p class="game">${data.stream.game}</p></div>`);
+    
+    
             }
         });
-    });
+    
+    }
+
+
 
 }); //End $(document).ready(function())
+
+
 
 const getStatus = (streamersName) =>{
 
