@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+
 body{
     background-color: #6541A5;
+    font-family: 'Fredoka One', cursive;
 }
 
 
@@ -53,8 +57,12 @@ body{
   }
 
   #author{
-      margin-left: 190px;
+      margin-left: 125px;
       margin-top: -40px;
+      margin-bottom: 20px;
+      font-family: 'Fredoka One', cursive;
+      color: white;
+      font-size: 15px;
   }
 
   .streamer {
@@ -129,7 +137,12 @@ p {
 
 .iconFormat{
     color: red;
-    font-size: 13px;
+    font-size: 18px;
+}
+
+.button-format{
+    font-weight: bold;
+
 }
 
 

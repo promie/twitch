@@ -11,9 +11,9 @@ $(document).ready(function(){
             channelStatus(data);
 
             if(data.logo === null){
-                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><span class="glyphicon glyphicon-remove-sign iconFormat" aria-hidden="true"></span></p></div>`)
+                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
             }else{
-                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${data.logo}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><span class="glyphicon glyphicon-remove-sign iconFormat" aria-hidden="true"></span></p></div>`)
+                $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${data.logo}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
             }
         });
     });
