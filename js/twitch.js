@@ -7,7 +7,6 @@ $(document).ready(function(){
 const init = () =>{
 
     const streamers = ['ESL_SC2', 'OgamingSC2', 'cretetion', 'freecodecamp', 'storbeck', 'habathcx', 'RobotCaleb', 'noobs2ninjas', 'septiess', 'vihart', 'frinlet', 'Dr4xell', 'eisighul', 'SYNTAG', 'MeteorDev'];
-    const noImageURL = 'http://www.iconninja.com/files/791/598/492/humans-person-social-users-profile-friends-account-icon.svg';
 
     clickEvents();
 
@@ -33,7 +32,9 @@ const channelStatus = (data) =>{
 }
 
 const displayInformation = (data) =>{
-    
+
+    const noImageURL = 'http://www.iconninja.com/files/791/598/492/humans-person-social-users-profile-friends-account-icon.svg';
+        
     if(data.logo === null){
         $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
     }else{
