@@ -18,28 +18,23 @@ $(document).ready(function(){
         });
     });
 
-    //Bugs need to be fixed in this section. Can't access the array list of streamers
-    const channelStatus = (data) =>{
-        const name = data.display_name;
-    
-        $.getJSON(getStatus(streamer), data=>{
-            
-            if(data.stream !== null){
-                
-                $(`#${name}`).remove();
-                $('.online-streamer').append(`<div class="streamer online><a href="${data.stream.channel.url}"><img class="logo" src="${data.stream.channel.logo}"</a><p>${name}</p><p class="game">${data.stream.game}</p></div>`);
-    
-    
-            }
-        });
-    
-    }
-
-
-
 }); //End $(document).ready(function())
 
 
+
+const channelStatus = (data) =>{
+    const name = data.display_name;
+
+    $.getJSON(getStatus(name), data=>{
+        
+        if(data.stream !== null){
+            
+            $(`#${name}`).remove();
+            $('.online-streamer').append(`<div class="streamer online><a href="${data.stream.channel.url}"><img class="logo" src="${data.stream.channel.logo}"</a><p>${name}</p><p class="game">${data.stream.game}</p></div>`);
+        }
+    });
+
+}
 
 const getStatus = (streamersName) =>{
 
