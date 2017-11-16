@@ -40,11 +40,11 @@ body{
     padding: 5px;
   }
   
-  .online {
+  .online-button {
     background-color: green;
   }
   
-  .offline {
+  .offline-button {
     background-color: red;
   }
 
@@ -94,7 +94,7 @@ body{
 
 p {
     float: left;
-    font-size: 1.4em;
+    font-size: 11px;
     padding: 0 0 0 25px;
 }
 
@@ -102,9 +102,19 @@ p {
     margin-top: 10px;
 }
 
-.marginBottom{
-    margin-bottom: 500px;
+.online {
+    background-color: #B8CCA6;
+    color: #4a5e82;
 }
+
+.online .game {
+    color: #5c5457;
+}
+
+
+
+
+
 
 
 
