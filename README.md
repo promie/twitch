@@ -1,11 +1,14 @@
 # Twitchtv JSON API
 Free Code Camp Intermediate Project.
-The objective of this project is to acquire information from the Twitch API. The $.getJSON() method was used for this project.
+This is the final API project for Free Code Camp Intermediate Project. The objective of this project is to acquire information from the Twitch database through an API. The $.getJSON() method was used.
 
-The real challenge is using two different URL for the API calls to make them linked.
-This project took longer than expected especially the planning part on how to structure.
+The real challenges for this project are:
+* Two different functions calling two APIs and create a linkage of information between the two.
+* HTML and CSS styling within the twitch.js
 
-What I've learnt in this project is writing an HTML element within the javascript which I will be greatly utilise for future projects.
+Reflection on what I've learnt:
+
+Writing an HTML element within javascript
 
 ```
 const displayInformation = (data) =>{
@@ -13,13 +16,21 @@ const displayInformation = (data) =>{
     const noImageURL = 'http://www.iconninja.com/files/791/598/492/humans-person-social-users-profile-friends-account-icon.svg';
         
     if(data.logo === null){
-        $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${noImageURL}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
+        $('.offline-streamer').append(`<div id="${data.display_name}" 
+        class="streamer"><a href="${data.url}"target="_blank">
+        <img class="logo" src="${noImageURL}"></a>
+        <p class="streamerName">${stringFormat(data.display_name)}</p>
+        <p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
     }else{
-        $('.offline-streamer').append(`<div id="${data.display_name}" class="streamer"><a href="${data.url}" target="_blank"><img class="logo" src="${data.logo}"></a><p class="streamerName">${stringFormat(data.display_name)}</p><p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
+        $('.offline-streamer').append(`<div id="${data.display_name}" 
+        class="streamer"><a href="${data.url}" target="_blank">
+        <img class="logo" src="${data.logo}"></a>
+        <p class="streamerName">${stringFormat(data.display_name)}</p>
+        <p class="game"><i class="fa fa-ban iconFormat" aria-hidden="true"></i></p></div>`)
     }
 ```
 
-Another useful functionality is is the function which include the list of clickEvents to tricker (adding and removing) CSS classes.
+Filtering buttons with jQuery with the CSS 'addClass' and 'removeClass'
 
 ```
 const clickEvents = () =>{
@@ -40,13 +51,10 @@ const clickEvents = () =>{
     });
 }
 ```
-Shout out again to my mentor, Tony Johnson, for providing guidance on the structure and the refactoring of the final javascript code.
+Shout out again to my mentor, Tony Johnson, for providing guidance on the structure and refactor session prior to the submission of this project. 
 
 ### About the App
-This app returns the information based on the channels information of which include the logos, display name, offline and online status
-
-The users have the ability to find information on the Wikipedia database based on the search.
-The information returns the header, information and hyperlink to the actual Wikipedia page.
+This app provides information for the Twitch channels whether the channel is offline or online. If online,the information on what the channel is currently displaying will be displayed. Users can click on the link to view the live streaming straight from the Twitch website.
 
 Check out the completed projected - [Twitchtv JSON API](https://promie.github.io/twitch/)
 
