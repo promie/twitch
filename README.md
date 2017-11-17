@@ -12,8 +12,6 @@ Writing an HTML element within javascript
 
 ```
 const displayInformation = (data) =>{
-
-    const noImageURL = 'http://www.iconninja.com/files/791/598/492/humans-person-social-users-profile-friends-account-icon.svg';
         
     if(data.logo === null){
         $('.offline-streamer').append(`<div id="${data.display_name}" 
