@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 const init = () =>{
 
-    const streamers = ['ESL_SC2', 'OgamingSC2', 'cretetion', 'freecodecamp', 'storbeck', 'habathcx', 'RobotCaleb', 'noobs2ninjas', 'septiess', 'vihart', 'frinlet', 'Dr4xell', 'eisighul', 'SYNTAG', 'MeteorDev'];
+    const streamers = ['kamet0','lirik','Towelliee','easportsfifa','ESL_SC2', 'OgamingSC2', 'cretetion', 'freecodecamp', 'storbeck', 'habathcx', 'RobotCaleb', 'noobs2ninjas', 'septiess', 'vihart', 'frinlet', 'Dr4xell', 'eisighul', 'SYNTAG', 'MeteorDev', 'TrumpSC', 'Omgitsfirefoxx', 'Amaz'];
 
     clickEvents();
 
