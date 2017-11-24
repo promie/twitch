@@ -1,30 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
-
 body{
     background-color: #6541A5;
     font-family: 'Fredoka One', cursive;
 }
 
-
-
-/*=====HEAD SECTION=====*/
-.github{
-    font-size: 35px;
-    text-decoration: none;
-    color: white;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-.github:hover{
-    font-size: 35px;
-    text-decoration: none;
-    color:white;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
+/*=====FORMATTING=====*/
 #states {
     padding-left: 20px;
     margin-top: -30x;
@@ -53,51 +34,13 @@ body{
   }
 
   #logo{
-      width: 330px;
-  }
-
-  #author{
-      margin-left: 125px;
-      margin-top: -40px;
-      margin-bottom: 20px;
-      font-family: 'Fredoka One', cursive;
-      color: white;
-      font-size: 15px;
-  }
-
-  .streamer {
-    width: 100%;
-    height: 60px;
-    background-color: lightgray;
-    border-top: 1px solid #E1E1E6;
-    float: left;
-    line-height: 30px;
+    width: 330px;
 }
 
-.streamer:hover{
-    width: 100%;
-    height: 60px;
-    background-color: lightblue;
-    border-top: 1px solid #E1E1E6;
+p {
     float: left;
-    line-height: 30px;
-}
-
-.logo {
-    height: 45px;
-    width: 45px;
-    margin: 6px 0 0 10px;
-    float: left;
-    border-radius: 50%;
-    border: 2px solid #E1E1E6;
-}
-
-.game {
-    width: 50%;
-    float: right;
-    text-align: center;
-    font-style: italic;
-    margin-top: 10px;
+    font-size: 11px;
+    padding: 0 0 0 25px;
 }
 
 #offline-streamer .game {
@@ -106,12 +49,6 @@ body{
 
 #offline-streamer p {
     color: #B8CCA6;
-}
-
-p {
-    float: left;
-    font-size: 11px;
-    padding: 0 0 0 25px;
 }
 
 .streamerName{
@@ -142,10 +79,66 @@ p {
 
 .button-format{
     font-weight: bold;
-
 }
 
+/*=====HEAD SECTION=====*/
+.github{
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
 
+.github:hover{
+    font-size: 35px;
+    text-decoration: none;
+    color:white;
+    margin-top: 10px;
+    text-decoration: none;
+}
 
+.logo {
+    height: 45px;
+    width: 45px;
+    margin: 6px 0 0 10px;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid #E1E1E6;
+}
 
-  
+#author{
+    margin-left: 125px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    font-size: 15px;
+}
+
+/*=====MAIN SECTION=====*/
+  .streamer {
+    width: 100%;
+    height: 60px;
+    background-color: lightgray;
+    border-top: 1px solid #E1E1E6;
+    float: left;
+    line-height: 30px;
+}
+
+.streamer:hover{
+    width: 100%;
+    height: 60px;
+    background-color: lightblue;
+    border-top: 1px solid #E1E1E6;
+    float: left;
+    line-height: 30px;
+}
+
+.game {
+    width: 50%;
+    float: right;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}  
