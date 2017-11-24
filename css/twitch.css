@@ -55,15 +55,6 @@ p {
     margin-top: 10px;
 }
 
-.online {
-    background-color: lightgreen;
-    color: #4a5e82;
-}
-
-.online .game {
-    color: #5c5457;
-}
-
 .hide{
     display: none;
 }
@@ -142,3 +133,12 @@ p {
     font-style: italic;
     margin-top: 10px;
 }  
+
+.online {
+    background-color: lightgreen;
+    color: #4a5e82;
+}
+
+.online .game {
+    color: #5c5457;
+}
